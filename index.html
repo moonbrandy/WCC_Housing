@@ -5061,11 +5061,11 @@
                                 bold: true},
           maxDepth: 1,
           maxPostDepth:0, 
-          minColor: '#ff0000',
+          minColor: '#000000 ',
           midColor: '#ffdf02',
           maxColor: '#053afa',
           minColorValue: 0,
-          maxColorValue: 60,
+          maxColorValue: 40,
           headerHeight: 15,
           fontColor: 'black',
           showScale: true,
@@ -5092,6 +5092,7 @@
 .legend li { float: left; margin-right: 3px; }
 .legend span { border: 1px solid #ccc; float: left; width: 10px; height: 12px; margin: 2px; }
 /* your colors */
+.legend .black { background-color: black; }
 .legend .red { background-color: #fc0606; }
 .legend .orange { background-color: #fc8000; }
 .legend .yellow { background-color: #ffdf02; }
@@ -5106,11 +5107,12 @@
   <body>
     
     <ul class="legend">
-    <li><span class="red"></span> 0 to 3 years</li>
+    <li><span class="black"></span> 0 to 1 years</li>
+    <li><span class="red"></span> 2 to 3 years</li>
     <li><span class="orange"></span> 4 to 10 years</li>
-    <li><span class="yellow"></span> 11 to 30 years</li>
-    <li><span class="green"></span> 31 to 50 years</li>
-    <li><span class="blue"></span> 51 to 100 years</li>
+    <li><span class="yellow"></span> 11 to 20 years</li>
+    <li><span class="green"></span> 21 to 30 years</li>
+    <li><span class="blue"></span> 31+ years</li>
     </ul>
 
     <div id="chart_div" style="width: 90%; height: 90%; padding: 30px; "></div>
