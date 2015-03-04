@@ -5068,11 +5068,18 @@
         tree.draw(data, options);
 
         function showFullTooltip(row, size, value) {
+            var assets = '';
+        	for (var i = 0; i < data.getNumberOfRows(); i++) {
+        		if (data.getValue(i, 1) == data.getValue(row, 0)) {
+                    assets += data.getValue(i, 0) +  ' Cost:' + data.getValue(i, 2).toFixed(2).toString() + ' Remaining Life:' + data.getValue(i, 3).toString() + '<br>'
+                };     		
+        	};
     return '<div style="background:#fd9; padding:10px; border-style:solid">' +
            '<strong>' + data.getValue(row, 0) +
           '</strong><br>' +
      data.getColumnLabel(2) + '(total): $' + size.toFixed(2) + '<br>' +
      data.getColumnLabel(3) + '(median): ' + Math.round(data.getValue(row, 3)) + 'years <br>' +
+     assets + '<br>' + 
      /*average.getColumnLabel(0) + '(average value): ' + average.getValue(row, 0) + 'years' +*/
       '</div>';
   }
